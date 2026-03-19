@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anumanth Soorya | Business Development Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --blue:    #0ea5e9;
+  --cyan:    #06b6d4;
+  --indigo:  #6366f1;
+  --blue2:   #3b82f6;
+  --grad:    linear-gradient(135deg,#0ea5e9,#06b6d4);
+  --grad2:   linear-gradient(135deg,#6366f1,#0ea5e9);
+  --grad3:   linear-gradient(135deg,#06b6d4,#6366f1);
+  --white:   #ffffff;
+  --off:     #f0f9ff;
+  --light:   #e0f2fe;
+  --muted:   #64748b;
+  --dark:    #0f172a;
+  --dark2:   #1e293b;
+  --card:    #ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--off);
+  color:var(--dark);
+  overflow-x:hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:#e0f2fe;}
+::-webkit-scrollbar-thumb{background:var(--grad);border-radius:10px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(240,249,255,0.85);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(14,165,233,0.15);
+  transition:all 0.3s;
+}
+.nav-logo{
+  font-family:'Syne',sans-serif;
+  font-weight:800;font-size:1.4rem;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{
+  color:var(--muted);text-decoration:none;
+  font-size:0.85rem;font-weight:500;
+  transition:color 0.3s;position:relative;
+}
+.nav-links a:hover{color:var(--blue);}
+.nav-cta{
+  background:var(--grad);color:#fff!important;
+  padding:0.5rem 1.3rem;border-radius:50px;
+  font-weight:600!important;
+  box-shadow:0 4px 15px rgba(14,165,233,0.35);
+  transition:transform 0.2s,box-shadow 0.2s!important;
+}
+.nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 8px 25px rgba(14,165,233,0.45)!important;}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  background: linear-gradient(160deg,#0f172a 0%,#0c2340 40%,#0e3a5a 70%,#0f172a 100%);
+  display:flex;align-items:center;
+  padding:6rem 5% 4rem;
+  position:relative;overflow:hidden;
+}
+
+/* Animated gradient blobs */
+.blob{
+  position:absolute;border-radius:50%;
+  filter:blur(70px);pointer-events:none;animation:blobMove 8s ease-in-out infinite;
+}
+.blob-1{width:600px;height:600px;background:rgba(14,165,233,0.18);top:-150px;right:-100px;animation-delay:0s;}
+.blob-2{width:400px;height:400px;background:rgba(6,182,212,0.15);bottom:-100px;left:-50px;animation-delay:3s;}
+.blob-3{width:300px;height:300px;background:rgba(99,102,241,0.15);top:30%;left:30%;animation-delay:5s;}
+@keyframes blobMove{
+  0%,100%{transform:translate(0,0) scale(1);}
+  33%{transform:translate(30px,-20px) scale(1.05);}
+  66%{transform:translate(-20px,30px) scale(0.95);}
+}
+
+/* Grid lines bg */
+.grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(14,165,233,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(14,165,233,0.07) 1px,transparent 1px);
+  background-size:50px 50px;
+  pointer-events:none;
+}
+
+.hero-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;
+}
+.hero-left{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(14,165,233,0.15);
+  border:1px solid rgba(14,165,233,0.3);
+  color:var(--cyan);padding:0.4rem 1rem;
+  border-radius:50px;font-size:0.78rem;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.6s ease forwards;opacity:0;
+}
+.badge-dot{
+  width:7px;height:7px;background:var(--cyan);
+  border-radius:50%;animation:pulse 1.5s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);}}
+
+.hero-name{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:800;line-height:1.05;
+  color:#fff;
+  animation:fadeUp 0.6s ease 0.2s forwards;opacity:0;
+}
+.hero-name .gradient-name{
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  display:block;
+}
+
+.hero-role{
+  font-size:1.1rem;color:rgba(255,255,255,0.6);
+  margin-top:0.8rem;font-weight:400;
+  animation:fadeUp 0.6s ease 0.4s forwards;opacity:0;
+}
+
+.hero-desc{
+  margin-top:1.5rem;color:rgba(255,255,255,0.55);
+  line-height:1.8;font-size:0.95rem;max-width:480px;
+  animation:fadeUp 0.6s ease 0.6s forwards;opacity:0;
+}
+
+.hero-btns{
+  display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;
+  animation:fadeUp 0.6s ease 0.8s forwards;opacity:0;
+}
+.btn-grad{
+  padding:0.8rem 2rem;
+  background:var(--grad);color:#fff;
+  font-weight:600;font-size:0.88rem;
+  border:none;border-radius:50px;
+  text-decoration:none;cursor:pointer;
+  box-shadow:0 4px 20px rgba(14,165,233,0.4);
+  transition:transform 0.2s,box-shadow 0.2s;
+  display:inline-flex;align-items:center;gap:0.5rem;
+}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(14,165,233,0.5);}
+.btn-outline{
+  padding:0.8rem 2rem;
+  background:transparent;color:#fff;
+  font-weight:600;font-size:0.88rem;
+  border:1.5px solid rgba(255,255,255,0.3);border-radius:50px;
+  text-decoration:none;
+  transition:all 0.3s;
+  display:inline-flex;align-items:center;gap:0.5rem;
+}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--cyan);}
+
+/* Hero Right — Stats Card */
+.hero-right{
+  animation:fadeUp 0.6s ease 1s forwards;opacity:0;
+}
+.stats-card{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:24px;padding:2.5rem;
+}
+.stats-card-title{
+  font-family:'Syne',sans-serif;
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:1.5rem;
+}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.stat-box{
+  background:rgba(14,165,233,0.1);
+  border:1px solid rgba(14,165,233,0.2);
+  border-radius:16px;padding:1.5rem;
+  text-align:center;transition:all 0.3s;
+}
+.stat-box:hover{
+  background:rgba(14,165,233,0.2);
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(14,165,233,0.2);
+}
+.stat-num{
+  font-family:'Syne',sans-serif;
+  font-size:2rem;font-weight:800;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;
+}
+.stat-lbl{color:rgba(255,255,255,0.5);font-size:0.75rem;margin-top:0.4rem;font-weight:500;}
+
+.scroll-indicator{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  color:rgba(255,255,255,0.3);font-size:0.72rem;letter-spacing:0.1em;
+  animation:fadeUp 0.6s ease 1.5s forwards;opacity:0;
+}
+.scroll-line{
+  width:1px;height:40px;
+  background:linear-gradient(to bottom,var(--cyan),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:0.3;transform:scaleY(0.5);}50%{opacity:1;transform:scaleY(1);}}
+
+/* ── SECTION BASE ── */
+section{padding:6rem 5%;}
+.container{max-width:1200px;margin:0 auto;}
+
+.sec-label{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(6,182,212,0.1));
+  border:1px solid rgba(14,165,233,0.25);
+  color:var(--blue);padding:0.35rem 1rem;
+  border-radius:50px;font-size:0.75rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.sec-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  font-weight:800;color:var(--dark);line-height:1.15;
+  margin-bottom:0.8rem;
+}
+.sec-title span{
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.sec-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:550px;}
+
+/* ── ABOUT ── */
+#about{background:#fff;}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:start;}
+.about-text p{color:var(--muted);line-height:1.9;font-size:0.95rem;margin-bottom:1.2rem;}
+
+.contact-strip{
+  display:flex;flex-direction:column;gap:0;
+  margin-top:2rem;
+  border:1px solid var(--light);border-radius:16px;overflow:hidden;
+}
+.ci{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.3rem;
+  border-bottom:1px solid var(--light);
+  transition:background 0.2s;
+}
+.ci:last-child{border-bottom:none;}
+.ci:hover{background:var(--off);}
+.ci-icon{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.ci-text{font-size:0.85rem;color:var(--dark);font-weight:500;}
+.ci-text a{color:var(--dark);text-decoration:none;transition:color 0.2s;}
+.ci-text a:hover{color:var(--blue);}
+
+/* Certs */
+.certs-wrap{margin-top:0;}
+.certs-head{
+  font-family:'Syne',sans-serif;font-weight:700;
+  font-size:1rem;color:var(--dark);margin-bottom:1rem;
+}
+.certs-flow{display:flex;flex-wrap:wrap;gap:0.6rem;}
+.cert{
+  background:linear-gradient(135deg,rgba(14,165,233,0.08),rgba(6,182,212,0.08));
+  border:1px solid rgba(14,165,233,0.2);
+  color:var(--blue2);
+  padding:0.45rem 1rem;border-radius:50px;
+  font-size:0.75rem;font-weight:600;letter-spacing:0.05em;
+  transition:all 0.3s;
+}
+.cert:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px);}
+
+/* Skills bars in about */
+.skill-rows{margin-top:2rem;display:flex;flex-direction:column;gap:1rem;}
+.skill-row-label{
+  display:flex;justify-content:space-between;
+  font-size:0.82rem;font-weight:600;color:var(--dark);margin-bottom:0.4rem;
+}
+.skill-row-label span{color:var(--blue);}
+.bar-track{
+  background:var(--light);border-radius:50px;height:8px;overflow:hidden;
+}
+.bar-fill{
+  height:8px;border-radius:50px;width:0;
+  background:var(--grad);
+  transition:width 1.4s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:0 2px 8px rgba(14,165,233,0.4);
+}
+
+/* ── SKILLS ── */
+#skills{background:var(--off);}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.skill-card{
+  background:#fff;border-radius:20px;
+  padding:2rem;
+  border:1px solid rgba(14,165,233,0.1);
+  transition:all 0.3s;position:relative;overflow:hidden;
+}
+.skill-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:var(--grad);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s;
+}
+.skill-card:hover::before{transform:scaleX(1);}
+.skill-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(14,165,233,0.12);
+  border-color:rgba(14,165,233,0.25);
+}
+.sk-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(6,182,212,0.1));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:1.2rem;
+}
+.sk-name{
+  font-family:'Syne',sans-serif;font-size:1.05rem;
+  font-weight:700;color:var(--dark);margin-bottom:0.5rem;
+}
+.sk-desc{color:var(--muted);font-size:0.83rem;line-height:1.65;}
+
+/* ── EXPERIENCE ── */
+#experience{background:#fff;}
+.exp-grid{display:flex;flex-direction:column;gap:0;margin-top:3rem;}
+.exp-card{
+  display:grid;grid-template-columns:200px 1fr;
+  gap:0;position:relative;
+}
+.exp-card::after{
+  content:'';position:absolute;
+  left:199px;top:0;bottom:0;
+  width:1px;background:linear-gradient(to bottom,var(--cyan),rgba(14,165,233,0.1));
+}
+.exp-left{
+  padding:2rem 2rem 2rem 0;
+  text-align:right;
+}
+.exp-period{
+  display:inline-block;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  font-size:0.8rem;font-weight:700;
+  letter-spacing:0.06em;
+}
+.exp-company{
+  color:var(--muted);font-size:0.78rem;
+  margin-top:0.5rem;line-height:1.5;
+  font-weight:500;
+}
+.exp-right{
+  padding:2rem 0 2rem 2.5rem;
+  position:relative;
+}
+.exp-dot{
+  position:absolute;left:-6px;top:2.4rem;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--grad);
+  box-shadow:0 0 0 4px rgba(14,165,233,0.15),0 0 15px rgba(14,165,233,0.3);
+}
+.exp-role{
+  font-family:'Syne',sans-serif;
+  font-size:1.25rem;font-weight:700;
+  color:var(--dark);margin-bottom:0.3rem;
+}
+.exp-desc{
+  color:var(--muted);font-size:0.875rem;
+  line-height:1.8;margin-top:0.6rem;max-width:680px;
+}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+.exp-tag{
+  background:linear-gradient(135deg,rgba(14,165,233,0.08),rgba(6,182,212,0.08));
+  color:var(--blue2);
+  border:1px solid rgba(14,165,233,0.2);
+  padding:0.28rem 0.8rem;border-radius:50px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.04em;
+}
+
+/* ── EDUCATION ── */
+#education{background:var(--off);}
+.edu-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1.5rem;margin-top:3rem;
+}
+.edu-card{
+  background:#fff;border-radius:20px;padding:2.2rem;
+  border:1px solid rgba(14,165,233,0.1);
+  transition:all 0.3s;position:relative;overflow:hidden;
+}
+.edu-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:3px;
+  background:var(--grad);
+}
+.edu-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(14,165,233,0.1);}
+.edu-yr{
+  font-size:0.75rem;font-weight:700;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;
+}
+.edu-badge{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:1rem;
+}
+.edu-deg{
+  font-family:'Syne',sans-serif;
+  font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:0.4rem;
+}
+.edu-inst{color:var(--blue);font-size:0.85rem;font-weight:600;}
+.edu-note{color:var(--muted);font-size:0.82rem;line-height:1.6;margin-top:0.8rem;}
+
+/* ── HIGHLIGHTS ── */
+#highlights{background:#fff;}
+.hl-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.hl-card{
+  background:var(--off);border-radius:20px;
+  padding:1.8rem;
+  border:1px solid rgba(14,165,233,0.1);
+  transition:all 0.3s;
+  display:flex;flex-direction:column;gap:1rem;
+}
+.hl-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 40px rgba(14,165,233,0.1);
+  border-color:rgba(14,165,233,0.3);
+  background:#fff;
+}
+.hl-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  box-shadow:0 4px 15px rgba(14,165,233,0.3);
+}
+.hl-num{
+  font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;
+}
+.hl-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--dark);}
+.hl-desc{color:var(--muted);font-size:0.82rem;line-height:1.6;}
+
+/* ── CONTACT ── */
+#contact{
+  background:linear-gradient(160deg,#0f172a 0%,#0c2340 50%,#0f172a 100%);
+  position:relative;overflow:hidden;
+}
+#contact .blob-1{opacity:0.6;}
+.contact-inner{
+  max-width:700px;margin:0 auto;text-align:center;
+  position:relative;z-index:2;
+}
+.contact-inner .sec-title{color:#fff;}
+.contact-inner .sec-sub{color:rgba(255,255,255,0.5);margin:0 auto 3rem;}
+.contact-cards{
+  display:flex;justify-content:center;gap:1.2rem;
+  flex-wrap:wrap;margin-bottom:3rem;
+}
+.cc{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:18px;padding:1.5rem 2rem;
+  text-decoration:none;
+  transition:all 0.3s;
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  min-width:170px;
+}
+.cc:hover{
+  background:rgba(14,165,233,0.15);
+  border-color:rgba(14,165,233,0.4);
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(14,165,233,0.2);
+}
+.cc-icon{font-size:1.6rem;}
+.cc-label{font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;}
+.cc-val{font-size:0.85rem;color:var(--cyan);font-weight:600;}
+
+/* ── FOOTER ── */
+footer{
+  background:#0a0f1e;
+  padding:1.5rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  border-top:1px solid rgba(14,165,233,0.1);
+}
+.f-logo{
+  font-family:'Syne',sans-serif;font-weight:800;
+  background:var(--grad);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;font-size:1rem;
+}
+.f-text{color:rgba(255,255,255,0.25);font-size:0.78rem;}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:1rem 4%;}
+  section{padding:5rem 4%;}
+  #hero{padding:5rem 4% 4rem;}
+  .hero-inner{grid-template-columns:1fr;gap:3rem;}
+  .hero-right{display:none;}
+  .about-grid{grid-template-columns:1fr;gap:3rem;}
+  .exp-card{grid-template-columns:1fr;border-left:2px solid rgba(14,165,233,0.3);padding-left:1.5rem;}
+  .exp-card::after{display:none;}
+  .exp-left{text-align:left;padding:1.5rem 0 0;}
+  .exp-right{padding:0.5rem 0 2rem;}
+  .edu-row{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .nav-links{display:none;}
+  .hero-name{font-size:2.5rem;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">Anumanth Soorya</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#contact" class="nav-cta">Contact Me</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="grid-bg"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Collaborations
+      </div>
+      <h1 class="hero-name">
+        Hi, I'm<br/>
+        <span class="gradient-name">Anumanth Soorya</span>
+      </h1>
+      <p class="hero-role">Business Development Manager &amp; Entrepreneur</p>
+      <p class="hero-desc">
+        Entrepreneur and tech professional driving digital innovation, institutional partnerships,
+        and startup ecosystem growth across Tamil Nadu. Founder of Sharpened Mind Tech &amp; Solutions.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-grad">✉️ Get In Touch</a>
+        <a href="#experience" class="btn-outline">📋 View Experience</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="stats-card">
+        <div class="stats-card-title">⚡ Impact at a Glance</div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-num">12.5K+</div>
+            <div class="stat-lbl">Students Impacted</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">12+</div>
+            <div class="stat-lbl">Workshops Led</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-lbl">MoUs Signed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">4+</div>
+            <div class="stat-lbl">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    SCROLL
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal-left">
+        <div class="sec-label">👋 About Me</div>
+        <h2 class="sec-title">The Person <span>Behind the Work</span></h2>
+        <div class="about-text" style="margin-top:1.5rem;">
+          <p>I am an entrepreneur and tech professional with a strong foundation in business development, digital marketing, and startup ecosystem building. With an MBA in International Business Management and a B.Tech in Chemical Engineering, I bring a unique blend of technical depth and business strategy.</p>
+          <p>As Founder &amp; CMO of Sharpened Mind Tech &amp; Solutions, I've established MOUs with multiple universities and institutions, benefiting 12,500+ students through skilling programs, workshops, and placement drives — bridging industry and academia across Tamil Nadu.</p>
+          <p>Product Ideator of WalkinView.com, selected for Umagine TN – Madurai Zone. Actively engaged with CII, TNSDC, StartupTN, SIDA, and Forge Innovation Ventures.</p>
+        </div>
+        <div class="contact-strip">
+          <div class="ci">
+            <div class="ci-icon">📍</div>
+            <div class="ci-text">Thiru Nagar, Madurai, Tamil Nadu</div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">📧</div>
+            <div class="ci-text"><a href="mailto:anumanthsoorya@gmail.com">anumanthsoorya@gmail.com</a></div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">📞</div>
+            <div class="ci-text"><a href="tel:9524584817">+91 9524584817</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="certs-wrap">
+          <div class="certs-head">🏅 Certified Courses</div>
+          <div class="certs-flow">
+            <span class="cert">NEBOSH IGC</span>
+            <span class="cert">IOSH MS</span>
+            <span class="cert">ITOL</span>
+            <span class="cert">HAZWOPER</span>
+            <span class="cert">COSHH</span>
+            <span class="cert">EMS</span>
+            <span class="cert">CPD</span>
+            <span class="cert">BBSM</span>
+            <span class="cert">MOC</span>
+          </div>
+        </div>
+
+        <div class="skill-rows" style="margin-top:2.5rem;">
+          <div class="certs-head">📊 Core Competencies</div>
+          <div>
+            <div class="skill-row-label">Strategy Building <span>92%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="92"></div></div>
+          </div>
+          <div>
+            <div class="skill-row-label">Digital Marketing <span>88%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="88"></div></div>
+          </div>
+          <div>
+            <div class="skill-row-label">Leadership <span>90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+          </div>
+          <div>
+            <div class="skill-row-label">Negotiation <span>85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
+          </div>
+          <div>
+            <div class="skill-row-label">Product Ideation <span>87%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="87"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="sec-label" style="justify-content:center;">🛠️ Skill Set</div>
+      <h2 class="sec-title" style="text-align:center;">What I <span>Bring to the Table</span></h2>
+      <p class="sec-sub" style="margin:0 auto;">A versatile skillset combining business acumen, tech awareness, and people-first leadership.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="sk-icon">📈</div>
+        <div class="sk-name">Strategy Building</div>
+        <div class="sk-desc">Crafting data-driven business strategies, go-to-market plans, and scalable growth frameworks for startups and institutions.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="sk-icon">📣</div>
+        <div class="sk-name">Digital Marketing</div>
+        <div class="sk-desc">Led full-scale digital campaigns for Myn Architectures and Sharpened Mind, driving brand visibility, lead generation and community growth.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="sk-icon">🤝</div>
+        <div class="sk-name">Negotiation</div>
+        <div class="sk-desc">Closed institutional partnerships and MoUs with top universities and corporates through strategic communication and deal-making.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="sk-icon">💡</div>
+        <div class="sk-name">Product Ideation</div>
+        <div class="sk-desc">Conceptualized WalkinView.com and an ERP system for Warpe Academy — transforming raw ideas into scalable digital products.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="sk-icon">👥</div>
+        <div class="sk-name">Leadership</div>
+        <div class="sk-desc">Led cross-functional teams and skilling programs for 200–12,500+ students, organizing placement drives and innovation events.</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="sk-icon">⚙️</div>
+        <div class="sk-name">Technical Coordination</div>
+        <div class="sk-desc">ETP/STP plant commissioning, UASBR project for CocaCola, process optimization, and environmental compliance management.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">💼 Career Journey</div>
+      <h2 class="sec-title">Work <span>Experience</span></h2>
+    </div>
+    <div class="exp-grid">
+
+      <div class="exp-card reveal">
+        <div class="exp-left">
+          <div class="exp-period">2024 – 2026</div>
+          <div class="exp-company">Warpe Academy<br/>Private Limited</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-dot"></div>
+          <div class="exp-role">Business Development Manager</div>
+          <div class="exp-desc">Drove institutional partnerships and collaborations, ideated an ERP system for Warpe Academy, and organized a placement drive at Annai Fathima College. Led digital marketing strategy and conducted a skilling program for 200 students at Natham Boys School. Represented the company at Dindigul Startup Fest and built networks with SIT and KLNCE.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Business Development</span>
+            <span class="exp-tag">ERP Ideation</span>
+            <span class="exp-tag">Digital Marketing</span>
+            <span class="exp-tag">Partnerships</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-left">
+          <div class="exp-period">2024 – 2026</div>
+          <div class="exp-company">Sharpened Mind<br/>Tech &amp; Solutions</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-dot"></div>
+          <div class="exp-role">Founder &amp; Chief Marketing Officer</div>
+          <div class="exp-desc">Leading marketing strategy, institutional partnerships, and technology execution for industry-driven skilling. Established MoUs with Madurai Kamaraj University, Mannar Thirumalai Nayakar College, and Sasa Infinity — benefiting 12,500+ students. Conceptualized Innoveria 1.0, Industry 4.0 programs, conducted 12+ workshops. Product Ideator of WalkinView.com — selected for Umagine TN Madurai Zone. Collaborated with CII, TNSDC, StartupTN, and Forge Innovation Ventures.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Founder</span>
+            <span class="exp-tag">CMO</span>
+            <span class="exp-tag">WalkinView.com</span>
+            <span class="exp-tag">MoU Signing</span>
+            <span class="exp-tag">Umagine TN</span>
+            <span class="exp-tag">EdTech</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-left">
+          <div class="exp-period">2023 – 2024</div>
+          <div class="exp-company">Aqua Lead<br/>Systems</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-dot"></div>
+          <div class="exp-role">Technical Coordinator</div>
+          <div class="exp-desc">Erection and commissioning of ETP and STP plants for industrial projects. Managed UASBR project implementation for CocaCola — coordinating with engineers, contractors, and plant teams for successful system startup. Ensured environmental and engineering compliance throughout.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">ETP / STP</span>
+            <span class="exp-tag">UASBR</span>
+            <span class="exp-tag">CocaCola Project</span>
+            <span class="exp-tag">Commissioning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-left">
+          <div class="exp-period">Pre-2024</div>
+          <div class="exp-company">MEPCO<br/>Phosphorus Plant</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-dot"></div>
+          <div class="exp-role">Junior Engineer Trainee</div>
+          <div class="exp-desc">Assisted in monitoring phosphorus production processes at MEPCO. Supported process monitoring, equipment inspection, and preventive maintenance. Collaborated with senior engineers in process optimization and operational reporting while adhering to industrial safety and environmental compliance standards.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Process Monitoring</span>
+            <span class="exp-tag">Safety Compliance</span>
+            <span class="exp-tag">Preventive Maintenance</span>
+            <span class="exp-tag">Chemical Engineering</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="sec-label" style="justify-content:center;">🎓 Education</div>
+      <h2 class="sec-title" style="text-align:center;">Academic <span>Background</span></h2>
+    </div>
+    <div class="edu-row">
+      <div class="edu-card reveal">
+        <div class="edu-yr">2024 — 2026</div>
+        <div class="edu-badge">🎓</div>
+        <div class="edu-deg">MBA — International Business Management</div>
+        <div class="edu-inst">Madurai Kamaraj University</div>
+        <div class="edu-note">Specializing in global marketing, trade finance, international strategy, and cross-border institutional partnerships.</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-yr">2016 — 2020</div>
+        <div class="edu-badge">⚗️</div>
+        <div class="edu-deg">B.Tech — Chemical Engineering</div>
+        <div class="edu-inst">Kalasalingam Academy of Research &amp; Education</div>
+        <div class="edu-note">Core studies in chemical processes, plant operations, industrial safety management, and environmental engineering.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HIGHLIGHTS ── -->
+<section id="highlights">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="sec-label" style="justify-content:center;">🏆 Key Highlights</div>
+      <h2 class="sec-title" style="text-align:center;">Achievements &amp; <span>Impact</span></h2>
+      <p class="sec-sub" style="margin:0 auto 0;">Milestones that define the journey so far.</p>
+    </div>
+    <div class="hl-grid">
+      <div class="hl-card reveal">
+        <div class="hl-icon">🎓</div>
+        <div class="hl-num">12,500+</div>
+        <div class="hl-title">Students Impacted</div>
+        <div class="hl-desc">Established MoUs with 3+ universities and conducted skilling programs, workshops, and training across Tamil Nadu.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🚀</div>
+        <div class="hl-num">Umagine TN</div>
+        <div class="hl-title">Selected Startup — Madurai Zone</div>
+        <div class="hl-desc">Product Ideator of WalkinView.com, selected to represent at Umagine TN – Madurai Zone by StartupTN.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🏆</div>
+        <div class="hl-num">Innoveria 1.0</div>
+        <div class="hl-title">Flagship Event Organized</div>
+        <div class="hl-desc">Conceptualized and organized Innoveria 1.0 and Industry 4.0 skilling programs for engineering students across Madurai.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🤝</div>
+        <div class="hl-num">3+ MoUs</div>
+        <div class="hl-title">Institutional Partnerships</div>
+        <div class="hl-desc">Signed MoUs with Madurai Kamaraj University, Mannar Thirumalai Nayakar College, and Sasa Infinity.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">💼</div>
+        <div class="hl-num">3</div>
+        <div class="hl-title">Placement Drives Organized</div>
+        <div class="hl-desc">Organized mega placement drives for academic institutions, connecting students with leading tech companies in Madurai.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🏭</div>
+        <div class="hl-num">CocaCola</div>
+        <div class="hl-title">UASBR Project Delivered</div>
+        <div class="hl-desc">Successfully managed UASBR reactor implementation for CocaCola, coordinating engineers, contractors, and full commissioning.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🌐</div>
+        <div class="hl-num">CII &amp; TNSDC</div>
+        <div class="hl-title">Ecosystem Engagement</div>
+        <div class="hl-desc">Active member of SIDA; built connections with CII, TNSDC, Forge Innovation Ventures, Evolvance, and StartupTN.</div>
+      </div>
+      <div class="hl-card reveal">
+        <div class="hl-icon">🎤</div>
+        <div class="hl-num">12+</div>
+        <div class="hl-title">Workshops Conducted</div>
+        <div class="hl-desc">Conducted 12+ workshops on technology, innovation, and entrepreneurship for students and institutions across Tamil Nadu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="sec-label" style="justify-content:center;background:rgba(14,165,233,0.15);border-color:rgba(14,165,233,0.3);">📬 Let's Connect</div>
+      <h2 class="sec-title" style="color:#fff;">Let's Build Something <span>Amazing Together</span></h2>
+      <p class="sec-sub">Open to business collaborations, institutional partnerships, startup consulting, speaking engagements, and new opportunities.</p>
+    </div>
+    <div class="contact-cards reveal">
+      <a href="mailto:anumanthsoorya@gmail.com" class="cc">
+        <div class="cc-icon">📧</div>
+        <div class="cc-label">Email</div>
+        <div class="cc-val">anumanthsoorya@gmail.com</div>
+      </a>
+      <a href="tel:9524584817" class="cc">
+        <div class="cc-icon">📞</div>
+        <div class="cc-label">Phone</div>
+        <div class="cc-val">+91 9524584817</div>
+      </a>
+      <div class="cc">
+        <div class="cc-icon">📍</div>
+        <div class="cc-label">Location</div>
+        <div class="cc-val">Madurai, Tamil Nadu</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <a href="mailto:anumanthsoorya@gmail.com" class="btn-grad" style="font-size:1rem;padding:1rem 2.8rem;">
+        ✉️ Send a Message
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="f-logo">Anumanth Soorya</div>
+  <div class="f-text">Business Development Manager · Entrepreneur · Madurai</div>
+  <div class="f-text">© 2025 All Rights Reserved</div>
+</footer>
+
+<script>
+// ── Scroll Reveal ──
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.bar-fill').forEach(b => {
+        b.style.width = b.dataset.w + '%';
+      });
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach((el,i) => {
+  el.style.transitionDelay = (i % 4) * 0.1 + 's';
+  io.observe(el);
+});
+
+// Animate bars in about
+const barIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(b => {
+        b.style.width = b.dataset.w + '%';
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('#about').forEach(el => barIO.observe(el));
+
+// ── Nav scroll highlight ──
+const secs = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 200) cur = s.id; });
+  links.forEach(l => {
+    const isActive = l.getAttribute('href') === '#' + cur;
+    if (!l.classList.contains('nav-cta')) {
+      l.style.color = isActive ? 'var(--blue)' : '';
+      l.style.fontWeight = isActive ? '600' : '';
+    }
+  });
+});
+
+// ── Nav shadow on scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow =
+    window.scrollY > 50 ? '0 4px 20px rgba(14,165,233,0.1)' : '';
+});
+</script>
+</body>
+</html>
